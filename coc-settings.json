@@ -1,0 +1,37 @@
+{
+		"coc.preferences.extensionUpdateCheck": "daily",
+        "coc.preferences.formatOnSaveFiletypes": [
+                "json",
+                "go",
+                "python"
+        ],
+        "suggest.noselect": true,
+        "suggest.enablePreselect": false,
+        "diagnostic.refreshOnInsertMode": false,
+        "diagnostic.checkCurrentLine": false,
+        "diagnostic.virtualTextPrefix": ">>> ",
+        "diagnostic.virtualText": true,
+        "diagnostic.virtualTextLevel":"hint",
+        "diagnostic.virtualTextCurrentLineOnly":false,
+        "codeLens.enable": true,
+		"languageserver": {	
+			"golang": {
+				"command": "gopls",
+				"rootPatterns": ["go.mod"],
+				"filetypes": ["go"]
+			},
+			"ccls": {
+        "command": "ccls",
+        "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+        "rootPatterns": [".ccls-root", "compile_commands.json"],
+        "initializationOptions": {
+          "cache": {
+            "directory": ".ccls-cache"
+          },
+          "client": {
+            "snippetSupport": true
+          }
+        }
+    }
+		}
+}
