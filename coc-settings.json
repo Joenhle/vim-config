@@ -3,11 +3,11 @@
         "coc.preferences.formatOnSaveFiletypes": [
                 "json",
                 "go",
+				"java",
                 "python"
         ],
 		"suggest.noselect": true,
         "suggest.enablePreselect": false,
-
 		"suggest.completionItemKindLabels": {
 			"constructor": "\ufb25",
 			"keyword": "\uf1de",
@@ -39,7 +39,7 @@
         "diagnostic.refreshOnInsertMode": true,
         "diagnostic.checkCurrentLine": false,
         "diagnostic.virtualTextPrefix": ">>> ",
-        "diagnostic.virtualText": true,
+        "diagnostic.virtualText": false,
 		"diagnostic.virtualTextLevel":"hint",
         "diagnostic.virtualTextCurrentLineOnly":false,
         "codeLens.enable": false,
@@ -49,11 +49,12 @@
 				"rootPatterns": ["go.mod"],
 				"filetypes": ["go"]
 			},
+		
 			"ccls": {
 				"command": "ccls",
 				"filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
 				"trace.server": "verbose",
-				"rootPatterns": [".ccls-root", "compile_commands.json"],
+				"rootPatterns": [".ccls", "compile_commands.json"],
 				"initializationOptions": {
 					"cache": {
 						"directory": ".ccls-cache"
